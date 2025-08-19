@@ -1,0 +1,254 @@
+/*body*/
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    font-size: 15pt;
+    z-index:1;
+    background-color:#C6C7D8;
+    position: relative;
+    padding-bottom: 2.5rem;
+}
+body::before {
+    content:'';
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:100%;
+    height: 100%;
+    background-image:url("bg/education.jpg");
+    background-size:cover;
+    background-position: center center;
+    opacity:0.5;
+    background-repeat: no-repeat;
+    z-index:-1;
+}
+
+/*navbar*/
+nav ul {
+    list-style-type:none;
+    overflow:hidden;
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+    background: linear-gradient(#404790, #8184A5);
+    padding: clamp(24px, 1.5%, 3%);
+}
+header li {
+    font-family: "Fjalla One", sans-serif;
+    font-size: clamp(15px, 1.3vh, 35px);
+}
+ul a {
+    color: white;
+}
+ul a:hover {
+    color: #797fdb;
+    cursor: pointer;
+}
+header {
+    margin-bottom:3rem;
+}
+
+.headings {
+    text-align:center;
+    font-family: "Fjalla One", sans-serif;
+    font-size: clamp(24px, 3.5vh, 35px);
+    margin-bottom: 1vh;
+    border: solid white 3px;
+    background: linear-gradient(#404790, #8184A5);
+    width: clamp(24rem, 45%, 60%);
+    margin: 3% auto;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    color: white;
+}
+
+/*profile div*/
+.prof_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    max-width: clamp(24rem, 30%, 45%);
+    border: solid white 1px;
+    border-radius: 15px;
+    background-color: rgba(129, 132, 165, 0.32);
+    -webkit-backdrop-filter: blur(35px);
+    backdrop-filter: blur(35px);
+}
+.profile h3 {
+    font-family: "Fjalla One", sans-serif;
+    font-size: clamp(1.8rem, 6vh, 9vh);
+    margin:20px;
+}
+.profile p {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: -1%;
+    text-align: center;
+    font-size: clamp(0.7vh, 3vh, 6vh);
+    font-family: "Josefin Sans";
+}
+.profile img {
+    width: clamp(100px, 180px, 240px);
+    border-radius: 10px;
+    margin-top:2%;
+    box-shadow: 10px 10px 15px #8A91D6;
+}
+
+/*educbg div*/
+.educbg {
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom: 1.5rem;
+}
+.educbg h1 {
+    font-family: "Fjalla One", sans-serif;
+    font-size: clamp(2vh, 5vh, 9vh);
+    padding: clamp(15px, 30px, 50px);
+    margin-bottom: auto;
+    margin-top: auto;
+}
+.educbg img {
+    max-width: 60%;
+    transition-property: all;
+    transition-timing-function: ease-in;
+}
+.educbg img:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+.elem, .jhs, .shs, .college {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    padding: 15px;
+    border:solid white 1px;
+    border-radius: 15px;
+    backdrop-filter: blur(35px);
+    background-color: rgba(129, 132, 165, 0.32);
+    -webkit-backdrop-filter: blur(35px);
+    height: clamp(25vh, 70vh, 90vh);
+}
+.educbg img {
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px #8A91D6;
+}
+.educbg p {
+    padding: 15px;
+    font-size: clamp(1.4vh, 3.5vh, 6vh);
+    font-family: "Josefin Sans";
+    margin-top: 1rem;
+}
+
+/*skills div*/
+.skills {
+    margin-top: 2.5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 1.7rem;
+}
+.skills img {
+    width: clamp(20vh, 50vh, 80vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #404790 1.5px;
+    border-radius: 20px;
+}
+.skills p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skill-desc {
+    border: solid white 1px;
+    border-radius: 15px;
+    background-color: rgba(129, 132, 165, 0.32);
+    -webkit-backdrop-filter: blur(35px);
+    backdrop-filter: blur(35px);
+    font-size: clamp(1.4vh, 2rem, 20vh);
+    font-family: "Josefin Sans";
+    padding: 6%;
+}
+
+@media (max-width:500px) {
+    nav ul {
+        padding: 1rem;
+    }
+    header li {
+        font-size: 12px;
+    }
+    header {
+        margin-bottom:1rem;
+    }
+    .headings {
+        font-size: 20px;
+        padding: 0.5rem;
+        width: 24rem;
+    }
+    .profile {
+        width: 15rem;
+        padding: 10px;
+    }
+    .profile h3 {
+        font-size: 1.6rem;
+        margin: 15px;
+    }
+    .profile p {
+        font-size: 1.2rem;
+    }
+    .profile img {
+        width: 8rem;
+    }
+    .educbg {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        text-align: center;
+    }
+    .educbg h1 {
+        font-size: 1.6rem;
+    }
+    .educbg p {
+        font-size: 1.2rem;
+    }
+    .educbg img {
+        width: auto;
+    }
+    .elem, .jhs, .shs, .college {
+        padding: 10px;
+        height: 45vh;
+        width: 20rem;
+    }
+    .skills {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        text-align: center;
+    }
+    .skills p {
+        font-size: 1.2rem;
+    }
+}

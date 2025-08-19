@@ -1,0 +1,192 @@
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    font-size: 15pt;
+    z-index:1;
+    background-color:#C6C7D8;
+    position: relative;
+    padding-bottom: 2.5rem;
+}
+body::before {
+    content:'';
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:100%;
+    height: 100%;
+    background-image:url("bg/education.jpg");
+    background-size:cover;
+    background-position: center center;
+    opacity:0.5;
+    background-repeat: no-repeat;
+    z-index:-1;
+}
+
+/*navbar*/
+nav ul {
+    list-style-type:none;
+    overflow:hidden;
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+    background: linear-gradient(#404790, #8184A5);
+    padding: clamp(24px, 1.5%, 3%);
+}
+header li {
+    font-family: "Fjalla One", sans-serif;
+    font-size: clamp(15px, 1.3vh, 35px);
+}
+ul a {
+    color: white;
+}
+ul a:hover {
+    color: #797fdb;
+    cursor: pointer;
+}
+header {
+    margin-bottom:3rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.form-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 70%;
+    height: clamp(24rem, 65vh, 58rem);
+    padding: 3rem;
+    border:solid white 1px;
+    border-radius: 15px;
+    backdrop-filter: blur(35px);
+    background-color: rgba(129, 132, 165, 0.32);
+    -webkit-backdrop-filter: blur(35px);
+}
+
+.badtrip {
+    font-size: clamp(0.7vh, 3vh, 6vh);
+    font-family: "Fjalla One";
+    text-align: center;
+    margin: 1rem 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+}
+
+#name{
+    margin: 0.5rem 1rem;
+    width: 90%;
+    height: 15%;
+    box-sizing: border-box;
+    border: solid black 1px;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: text;
+}
+#email {
+    margin: 0.5rem 1rem;
+    width: 90%;
+    height: 15%;
+    box-sizing: border-box;
+    border: solid black 1px;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: text;
+} 
+#message {
+    margin: 1.5rem 1rem;
+    width: 90%;
+    height: clamp(5rem, 25vh, 60vh);
+    box-sizing: border-box;
+    border: solid black 1px;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: text;
+} 
+#name:hover, #email:hover, #message:hover {
+    border: solid #797fdb 2px;
+}
+#name:active, #email:active, #message:active {
+    border: solid #797fdb 3px;
+}
+#name::placeholder, #email::placeholder, #message::placeholder {
+    font-size: 1.2rem;
+    font-family: "Josefin Sans";
+}
+#btn {
+    text-align:center;
+    font-family: "Fjalla One", sans-serif;
+    font-size: 1.5rem; 
+    margin-bottom: 1vh;
+    border: solid white 3px;
+    background: linear-gradient(#404790, #8184A5);
+    width: 30%;
+    margin: 0.3rem auto;
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    color: white;
+}
+#btn:hover {
+    cursor: pointer;
+    background-color: #404790;
+    border: solid black 2px;
+}
+
+@media (max-width:500px) {
+    nav ul {
+        padding: 1rem;
+    }
+    header li {
+        font-size: 12px;
+    }
+    header {
+        margin-bottom: 1rem;
+    }
+    .form-box {
+        height: 55vh;
+        width: 60%;
+    }
+    .badtrip {
+        position: relative;
+        font-size: 1.2rem;
+        top: 4%;
+    }
+    form {
+        margin: 0.6rem;
+        margin-bottom: 0;
+    }
+    #name, #email {
+        padding: 10px;
+        height: 2.3rem;
+    }
+    #message {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding: 10px;
+        height: 11rem;
+    }
+    #btn {
+        width: 14rem;
+        font-size: 1rem;
+    }
+    #name::placeholder, #email::placeholder, #message::placeholder {
+        font-size: 1rem;
+    }
+}

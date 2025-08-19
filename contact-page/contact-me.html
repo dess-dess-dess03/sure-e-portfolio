@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online Portfolio (Revised)</title>
+  <link rel="stylesheet" href="contact-me.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="art-gallery/art-gallery.html">Art Gallery</a></li>
+        <li><a href="internship/internship.html">Internship Experience</a></li>
+        <li><a href="contact-page/contact-me.html">Contact Me</a></li>
+    </ul>
+    </nav>
+    </header>
+    <main>
+    <div class="form-box">
+      <div class="badtrip"><p>Thank you for going through my online portfolio.<br>Should you want to contact me, please fill out the form below and submit it.</p></div>
+      <form action="https://formspree.io/f/movlzylw" method="post">
+        <input type="text" name="name" id="name" placeholder="Your Name" required>
+        <input type="text" name="email" id="email" placeholder="Your Email" required>
+        <textarea name="message" id="message" placeholder="Write your message."required></textarea>
+        <input type="text" name="_gotcha" style="display:none">
+        <button type="Submit" id="btn">Send</button>
+      </form>
+    </div>
+    </main>
+</body>
+</html>
